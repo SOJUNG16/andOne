@@ -1,69 +1,101 @@
-## &amp;분의일
-
-2020.9 ~ 2020.11.
-
-팀명 : 능력있는 사람들
-
-프로젝트명 : &amp;분의일
-
-팀원: 김세영, 고은빈, 김소정, 김홍중, 주희수
-
-배포링크: 추후 추가
-
-- - -
-
-## 🖥 Project
-
-#### 개요
+# &amp;분의일
 
 함께하는 지역공동체 서비스를 컨셉으로 N분의 1로 나누고, AND, 함께한다는 중의적 의미를 담고 있습니다.
-물건을 함께 사고 나누는 것뿐만 아니라, 한걸음 나아가 함께하는 위치 기반 소모임 서비스를 제공하고
-우리동네지역 업체들의 정보와 리뷰 서비스도 제공하여 진정한 의미의 함께하는 지역공동체 서비스를 지향하고 있습니다
+이웃과 물건을 함께 사고 나누는 것뿐만 아니라,  위치 기반 소모임 서비스를 제공하고
+지역 업체들의 정보와 리뷰 서비스도 제공하여 진정한 의미의 함께하는 지역공동체 서비스를 지향하고 있습니다
 
-#### 주요기능
+* <b>개발기간</b> : 2020.08.21 ~ 2020.11.13
+* <b>개발인원</b>:  5명(팀프로젝트)
 
-- 위치기반 서비스
-- 포인트 충전을 이용한 선결제 서비스
-- 다자간 채팅 기능
+<br>
 
-#### 기술스택
+## 1. 사용기술
+
+* Java 8 
+* Spring 4.3
+* Javascript 
+* OracleDB 
+* AWS 
 
 <img src="https://stothey0804.github.io/assets/images/project/stack.png">
 
+<br>
+
+## 2.ERD 설계
+
+![모델링(물리)](https://user-images.githubusercontent.com/66711644/112282000-03cd4a00-8cca-11eb-8b54-6c677ffb05aa.PNG)
+
+<br>
+
+## 3.구현 기능
+
+이 서비스는 사용자의 위치기반으로 주변의 공동구매자를 찾는 것을 도와줍니다.
+사용자는 등록이나 검색을 통해  공동구매 신청이 가능하며 선 결제한 포인트로 결제할 수 있습니다.
+
+<details>
+    <summary><b>구현기능 설명 펼치기</b></summary>
+    <div markdown="1">
+         
+### 3-1. 전체흐름
+![프로세스](https://user-images.githubusercontent.com/66711644/112427276-aa722300-8d7c-11eb-8db0-91b215979ee8.png)
+       
+
+ ###  3-2. spring scheduler
+
+* 일정주기마다 상태를 확인하여 변경/지급을 진행합니다. :pushpin: [코드확인](https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/and/p001/controller/AndP001_d001ControllerImpl.java#L300)
+
+### 3-3. 게시판 CRUD
+
+* 게시판 글쓰기/수정/삭제 를 구현했습니다. :pushpin: [코드확인](https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/and/p002/controller/AndP002_d001ControllerImpl.java#L34) 
+* 상세조회를 구현했습니다. :pushpin: [코드확인](https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/and/p001/controller/AndP001_d001ControllerImpl.java#L231)
+
+### 3-4. 포인트 충전
+
+* 간편결제(카카오페이)API를 이용해 포인트를 충전 후 결제를 진행합니다. :pushpin: [코드확인](https://github.com/stothey0804/andOne/blob/abf1db045fd26d6c2502e5fea8e3ccb1ea915d67/src/main/java/project/point/p001/controller/PointP001_d003ControllerImpl.java#L33)
+
+### 3-5. 회원가입/로그인
+
+* Ajax를 이용해 중복체크(회원가입)와 ID와 PW(로그인)를 확인합니다. :pushpin: [코드확인](https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/shop/p001/controller/ShopP001_d001ControllerImpl.java#L35) [코드확인](https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/shop/p001/controller/ShopP001_d002ControllerImpl.java#L36)
 
 
-- - -
+</div></details>
 
-## 👩‍💻 Member
+<br>
 
-#### 김세영(팀장)
+## 4.트러블슈팅경험
 
-- 회원 기능 전체(가입,문의,신고,평가) CRUD
-- 비밀번호 찾기를 위한 메일발송과, 회원인증을 위한 SMS전송 구현.
-- 웹소켓을 이용한 알림 기능을 구현했습니다.
-- 간편결제 API를 이용한 포인트 충전기능을 구현했습니다.
-- 맵 API를 이용하여 위치정보를 사용하기 위한 공통 js파일을 작성했습니다.
-- 공통 기능을 수행하는 Common Class를 작성했습니다.
-- chart js를 통해 쿼리로 조회한 통계정보를 시각화했습니다.
-- 부트스트랩을 이용하여 CSS 마무리 작업을 했습니다.
+<details>
+    <summary>AWS RDS 속도 저하 문제</summary>
+    <div markdown="1">
 
-#### 고은빈
+* 기존 리전(Regions)에 있던 RDS 데이터베이스 스냅샷을 복사해 리전을 서울로 변경함. 
 
-- 전달주시면 수정합니당
+    </div>
+</details>
 
-#### 김소정
+<details>
+    <summary>게시판 정렬과 페이징 처리</summary>
+    <div markdown="1">
 
-- 업체회원가입 및 로그인 기능 구현했습니다
-- 같이(먹기/하기/사기) 기능 CRUD
-- 등록된 위치정보를 바탕으로 거리계산 기능을 구현했습니다
-- 포인트 결제 기능을 같이(먹기,하기,사기)에 적용했습니다
-- Spring Batch를 이용한 글 상태 변경 및 포인트지급 기능을 구현했습니다
-- AWS를 이용한 EC2/RDS 서버 구축 및 배포를 맡았
+* 메인과 검색결과에서 게시물을 최신순/마감순 정렬로 볼 수 있게 구성했습니다. 
+이 때 정렬 방법에 따른 페이징을 고민하게 되었습니다. 처음에는 정렬방법에 따라 쿼리를 따로 구성했으나 같은코드를 계속반복하는 느낌을 받았고 
+* 같은 코드에 구분할 수 있는 'flag'만 추가해 하나의 코드로 두가지의 정렬을 처리할 수 있었습니다. :pushpin:[코드확인](https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/resources/mybatis/mappers/and/p001.xml#L35) 
 
-#### 김홍중
+    </div>
+</details>
 
-- 전달주시면 수정합니당
+<details>
+    <summary>거리계산 문제</summary>
+    <div markdown="1">
 
-#### 주희수
+* 위치기반 서비스로 사용자가 메인에서 선택한 위치와 게시글에 등록되어있는 위치를 비교한 정보들을 사용자에게 뿌려줘야했습니다. 카카오맵 API를 사용해 거리계산을 하기 위해 모든 게시글을 위치정보를 Json형태로 화면단에 가져와서 javascript로 계산하려고 했으나 모든 위치 정보를 다 가지고 오는 것은 효율적이지도 못하고 속도저하를 유발한다는 생각에 고민하다가 
+* 한 컬럼으로 받았던 좌표(위도/경도)정보를 위도컬럼,경도컬럼으로 나눠서 받은 후 두 좌표사이의 거리를 반환하는 함수를 사용해 DB에서 기준에 맞는 정보만 불러오도록 변경했습니다.
+    </div>
+</details>
 
-- 전달주시면 수정합니당
+<br>
+
+## 5.회고/느낀점
+ 몇달동안 배우면서 여기저기 흩어져있던 지식들이 프로젝트를 기준으로 모여서 하나의 길을 만들어 주었다. 프로젝트를 마친 지금 이제야 뭔가 흐름이 살짝 보인다는 느낌을 받았다. 배우면서는 '이걸 어떻게 사용해야 되지?' 라는 물음표만 가득했는데, 점차 깨닫는 느낌표가 많아졌고 그만큼 내가 많이 부족하다는 생각을 하게 되었다. 
+책이나 강사님께 배운 것을 실습하는 것과 프로젝트를 진행하는 것은 정말 너무 달랐다. 기능을 구현해 나가면서 단 한 번이라도 문제 없이 끝낸적이 없을정도였다. 그 문제를 해결하기 위해 아침부터 저녁까지 컴퓨터 앞에서 앉아서 고민하고 컴퓨터를 덮고서도 계속 생각하고 고민하다가 결국 마침내 해결했을 때의 기분을 정말 어떤것과 비교할 수 없었다. 그러면서 개발에 재미를 느끼고 프로젝트를 끝까지 끝낼 수 있는 원동력을 얻었다.
+그리고 개발을 하면서 커뮤니케이션의 중요성을 깨달았다. 이 프로젝트 하나를 완성하는데 정말 많은 회의와 대화 질문이 있었다. 팀원들에게 정말 많이 배웠고 도움받았다. 대화하면서 내가 잘못 이해하고 있던 부분이나 내가 알고 있는 것들을 알려주면서 나도 프로젝트에 대해 더 잘 알게 되었다. 부족한 부분이 많은 내 질문에 항상 답변해준 팀원들 덕분에 프로젝트를 잘 마무리할 수 있었다.  
