@@ -69,7 +69,9 @@
 
 ### 3-5. 회원가입/로그인
 
-* Ajax를 이용해 중복체크(회원가입)와 ID와 PW(로그인)를 확인합니다. :pushpin: [코드 확인](https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/shop/p001/controller/ShopP001_d001ControllerImpl.java#L35) [코드 확인](https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/shop/p001/controller/ShopP001_d002ControllerImpl.java#L36)
+* Ajax를 이용해 중복체크(회원가입), ID와 PW(로그인)를 확인합니다. :pushpin: [코드 확인](https://github.com/SOJUNG16/andOne/blob/407661f28a4385098279a7bd281bd7e185bd5313/src/main/webapp/WEB-INF/views/shop/p001_d001_inserBmember.jsp#L20) 
+[코드 확인]
+(https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/shop/p001/controller/ShopP001_d002ControllerImpl.java#L36)
 
 
 </div></details>
