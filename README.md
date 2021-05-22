@@ -56,22 +56,22 @@
 
  ###  3-2. spring scheduler
 
-* 일정주기마다 상태를 확인하여 변경/지급을 진행합니다. :pushpin: [코드 확인](https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/and/p001/controller/AndP001_d001ControllerImpl.java#L300)
+* 일정주기마다 상태를 확인하여 변경/지급을 진행합니다. :pushpin: [코드 확인] (https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/and/p001/controller/AndP001_d001ControllerImpl.java#L300)
 
 ### 3-3. 게시판 CRUD
 
-* 게시판 글쓰기/수정/삭제 를 구현했습니다. :pushpin: [코드 확인](https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/and/p002/controller/AndP002_d001ControllerImpl.java#L34) 
-* 상세조회를 구현했습니다. :pushpin: [코드 확인](https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/and/p001/controller/AndP001_d001ControllerImpl.java#L231)
+* 게시판 글쓰기/수정/삭제 를 구현했습니다. :pushpin: [코드 확인] (https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/and/p002/controller/AndP002_d001ControllerImpl.java#L34) 
+* 상세조회를 구현했습니다. :pushpin: [코드 확인] (https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/and/p001/controller/AndP001_d001ControllerImpl.java#L231)
 
 ### 3-4. 포인트 충전
 
-* 간편 결제(카카오페이) API를 이용해 포인트를 충전 후 결제를 진행합니다. :pushpin: [코드 확인](https://github.com/stothey0804/andOne/blob/abf1db045fd26d6c2502e5fea8e3ccb1ea915d67/src/main/java/project/point/p001/controller/PointP001_d003ControllerImpl.java#L33)
+* 간편 결제(카카오페이) API를 이용해 포인트를 충전 후 결제를 진행합니다. :pushpin: [코드 확인] (https://github.com/stothey0804/andOne/blob/abf1db045fd26d6c2502e5fea8e3ccb1ea915d67/src/main/java/project/point/p001/controller/PointP001_d003ControllerImpl.java#L33)
 
 ### 3-5. 회원가입/로그인
 
-* Ajax를 이용해 중복체크(회원가입), ID와 PW(로그인)를 확인합니다. :pushpin: [코드 확인](https://github.com/SOJUNG16/andOne/blob/407661f28a4385098279a7bd281bd7e185bd5313/src/main/webapp/WEB-INF/views/shop/p001_d001_inserBmember.jsp#L20) 
-[코드 확인]
-(https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/shop/p001/controller/ShopP001_d002ControllerImpl.java#L36)
+* Ajax를 이용해 중복체크(회원가입), ID와 PW(로그인)를 확인합니다. :pushpin: 
+     [코드 확인] (https://github.com/SOJUNG16/andOne/blob/407661f28a4385098279a7bd281bd7e185bd5313/src/main/webapp/WEB-INF/views/shop/p001_d001_inserBmember.jsp#L20) 
+     [코드 확인] (https://github.com/SOJUNG16/andOne/blob/9d489960897f0bb570b439e1a5967a51c88f5776/src/main/java/project/shop/p001/controller/ShopP001_d002ControllerImpl.java#L36)
 
 
 </div></details>
