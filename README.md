@@ -37,7 +37,7 @@
 
 ## 2. ERD 설계
 
-![모델링(물리)](https://user-images.githubusercontent.com/66711644/112282000-03cd4a00-8cca-11eb-8b54-6c677ffb05aa.PNG)
+![모델링(물리)](https://user-images.githubusercontent.com/66711644/119925871-3721a300-bfb1-11eb-8fc3-ddf1bc92e539.png)
 
 <br>
 
