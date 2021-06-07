@@ -6,11 +6,11 @@
 
 * <b>개발 기간</b> : 2020.08.21 ~ 2020.11.13
 * <b>개발 인원</b>:  5명(팀 프로젝트)
-* 실행영상
+* <b>실행영상 및 이미지</b>
+
 [![실행영상](https://img.youtube.com/vi/klkt6y9kJEQ/0.jpg)](https://youtu.be/klkt6y9kJEQ?t=0s)
 [![실행영상](https://img.youtube.com/vi/uWVY3T9QccM/0.jpg)](https://youtu.be/uWVY3T9QccM?t=0s)
 
-*이미지
 ![image](https://user-images.githubusercontent.com/66711644/118234964-092b6180-b4cf-11eb-93c6-c300af4633bc.png)
  ![엔분의일](https://user-images.githubusercontent.com/66711644/118235276-8060f580-b4cf-11eb-877d-fda527a5bd83.png)
 <details>
